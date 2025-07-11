@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tentang Kami - PixelZone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background-color: black;
+      color: #39ff14;
+    }
+
+    .glitch {
+      text-shadow: 2px 0 red, -2px 0 blue;
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-1px, 1px); }
+      40% { transform: translate(1px, -1px); }
+      60% { transform: translate(-1px, -1px); }
+      80% { transform: translate(1px, 1px); }
+      100% { transform: translate(0); }
+    }
+
+    .btn-back {
+      margin-top: 2rem;
+      background: black;
+      color: #39ff14;
+      border: 2px solid #39ff14;
+      padding: 10px 20px;
+      font-size: 12px;
+      box-shadow: 2px 2px 0 #39ff14;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+      display: inline-block;
+    }
+
+    .btn-back:hover {
+      background-color: #39ff14;
+      color: black;
+      transform: scale(1.05);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      background-color: #111;
+      border: 3px solid #39ff14;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body class="min-h-screen px-4 py-10">
+
+  <h1 class="glitch text-3xl md:text-5xl text-center mb-10">🕹️ Tentang PixelZone</h1>
+
+  <div class="container text-sm md:text-base leading-relaxed">
+    <p class="mb-4">
+      <strong>PixelZone</strong> adalah tempat rental konsol game yang menghadirkan suasana retro dengan teknologi modern.
+      Kami menyediakan layanan rental PS3, PS4, PS5, serta berbagai paket ruangan seperti Standar, Ekonomi, hingga VIP Room.
+    </p>
+
+    <p class="mb-4">
+      Didirikan oleh para pecinta game, kami memahami pentingnya kenyamanan, kualitas, dan pengalaman bermain terbaik untuk pelanggan.
+      Semua konsol dilengkapi game pilihan, stick original, dan ruangan yang cozy untuk seru-seruan bareng teman atau keluarga.
+    </p>
+
+    <p class="mb-4">
+      Kami hadir di tengah gamer lokal untuk memberikan pengalaman gaming premium tanpa perlu membeli perangkat mahal.
+      Dengan tampilan bertema pixel-glitch khas game klasik, PixelZone bukan cuma rental biasa — ini nostalgia yang hidup kembali.
+    </p>
+
+    <p class="mb-4">
+      🎯 <strong>Misi Kami:</strong> Memberikan akses hiburan berkualitas untuk semua kalangan.
+    </p>
+
+    <p class="mb-4">
+      📍 <strong>Lokasi:</strong> Jl. Gamezone No. 88, Pixel City<br>
+      📱 <strong>Kontak:</strong> 0812-3456-7890 (WhatsApp)
+    </p>
+  </div>
+
+  <div class="text-center mt-10">
+    <a href="index.html" class="btn-back">⬅ Kembali ke Beranda</a>
+  </div>
+
+</body>
+</html>

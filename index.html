@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rental PS Retro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background: black;
+      color: #39ff14;
+      overflow-x: hidden;
+    }
+    .glitch {
+      position: relative;
+      color: white;
+      font-size: 24px;
+      text-shadow:
+        2px 0 red,
+        -2px 0 blue;
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(-2px, -2px); }
+      60% { transform: translate(2px, 2px); }
+      80% { transform: translate(2px, -2px); }
+      100% { transform: translate(0); }
+    }
+
+    .btn-pixel {
+      border: 4px solid #39ff14;
+      padding: 12px 20px;
+      display: inline-block;
+      background-color: black;
+      color: #39ff14;
+      text-transform: uppercase;
+      box-shadow: 2px 2px 0px #39ff14;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .btn-pixel:hover {
+      background-color: #39ff14;
+      color: black;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="text-center min-h-screen flex flex-col justify-center items-center px-4">
+
+  <h1 class="glitch text-4xl md:text-6xl mb-8">RENTAL PS PIXELZONE</h1>
+
+  <p class="mb-10 text-lg md:text-xl text-gray-400 max-w-xl">
+    Selamat datang di dunia retro gaming! Nikmati sensasi sewa PS3, PS4, dan PS5 dengan nuansa konsol klasik dan layanan modern!
+  </p>
+
+  <div class="flex flex-col md:flex-row gap-6">
+    <a href="paket.html" class="btn-pixel">Lihat Paket</a>
+    <a href="history.html" class="btn-pixel">History Booking</a>
+    <a href="tentang.html" class="btn-pixel">Tentang Kami</a>
+  </div>
+
+  <footer class="mt-16 text-gray-500 text-xs">
+    &copy; 2025 PixelZone Rental PS. All rights reserved.
+  </footer>
+</body>
+</html>

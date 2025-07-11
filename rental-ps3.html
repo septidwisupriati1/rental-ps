@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rental PS3 - PixelZone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background-color: black;
+      color: #39ff14;
+    }
+
+    .glitch {
+      text-shadow: 2px 0 red, -2px 0 blue;
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-1px, 1px); }
+      40% { transform: translate(1px, -1px); }
+      60% { transform: translate(-1px, -1px); }
+      80% { transform: translate(1px, 1px); }
+      100% { transform: translate(0); }
+    }
+
+    input, select, textarea {
+      background-color: black;
+      border: 2px solid #39ff14;
+      color: #39ff14;
+      font-family: 'Press Start 2P', cursive;
+      padding: 10px;
+      width: 100%;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      background-color: #111;
+    }
+
+    .btn-submit {
+      background: black;
+      color: #39ff14;
+      border: 3px solid #39ff14;
+      padding: 10px 20px;
+      font-size: 14px;
+      box-shadow: 2px 2px 0 #39ff14;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .btn-submit:hover {
+      background-color: #39ff14;
+      color: black;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="p-6 max-w-3xl mx-auto min-h-screen">
+
+  <h1 class="text-3xl md:text-5xl text-center glitch mb-10">Rental PS3</h1>
+
+  <div class="bg-black border-4 border-green-400 p-6 mb-8 shadow-lg">
+    <h2 class="text-xl mb-3">🎮 Paket PS3 Standard</h2>
+    <ul class="list-disc ml-6 text-sm mb-3">
+      <li>Include 2 Stick</li>
+      <li>10 Game Pilihan</li>
+      <li>Durasi: 6 Jam</li>
+    </ul>
+    <p class="font-bold text-lg">Harga: Rp 40.000</p>
+  </div>
+
+  <form action="#" method="POST" class="space-y-6">
+    <div>
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" required />
+    </div>
+
+    <div>
+      <label for="tanggal">Tanggal Sewa</label>
+      <input type="date" id="tanggal" name="tanggal" required />
+    </div>
+
+    <div>
+      <label for="durasi">Durasi Sewa</label>
+      <select id="durasi" name="durasi" required>
+        <option value="6 jam">6 Jam</option>
+        <option value="12 jam">12 Jam</option>
+        <option value="24 jam">24 Jam</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="kontak">Nomor HP / WA</label>
+      <input type="tel" id="kontak" name="kontak" required />
+    </div>
+
+   <div class="text-center">
+  <a href="berhasil.html" class="btn-submit inline-block">Kirim Pemesanan</a>
+</div> 
+  </form>
+
+  <div class="text-center mt-10">
+    <a href="paket.html" class="btn-submit">⬅ Kembali ke Paket</a>
+  </div>
+
+</body>
+</html>

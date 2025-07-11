@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Riwayat Booking - PixelZone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background-color: black;
+      color: #39ff14;
+    }
+
+    .glitch {
+      text-shadow: 2px 0 red, -2px 0 blue;
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-1px, 1px); }
+      40% { transform: translate(1px, -1px); }
+      60% { transform: translate(-1px, -1px); }
+      80% { transform: translate(1px, 1px); }
+      100% { transform: translate(0); }
+    }
+
+    .card {
+      border: 3px solid #39ff14;
+      background-color: #111;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+    }
+
+    .btn-qr {
+      margin-top: 1rem;
+      background: black;
+      color: #39ff14;
+      border: 2px solid #39ff14;
+      padding: 8px 16px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .btn-qr:hover {
+      background-color: #39ff14;
+      color: black;
+      transform: scale(1.05);
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body class="p-6 max-w-4xl mx-auto">
+
+  <h1 class="glitch text-3xl md:text-5xl text-center mb-10">🗂️ Riwayat Booking</h1>
+
+  <!-- Data Booking Lama -->
+  <div class="card">
+    <p><strong>Nama:</strong> Raka Pratama</p>
+    <p><strong>Paket:</strong> PS3 Standard</p>
+    <p><strong>Tanggal:</strong> 2024-07-05</p>
+    <p><strong>Durasi:</strong> 6 Jam</p>
+    <p class="text-red-400 mt-2">QR Code tidak tersedia untuk data ini.</p>
+  </div>
+
+  <div class="card">
+    <p><strong>Nama:</strong> Wulan</p>
+    <p><strong>Paket:</strong> VIP Room + PS5</p>
+    <p><strong>Tanggal:</strong> 2024-07-08</p>
+    <p><strong>Durasi:</strong> 24 Jam</p>
+    <p class="text-red-400 mt-2">QR Code tidak tersedia untuk data ini.</p>
+  </div>
+
+  <!-- Booking Terbaru -->
+  <div class="card">
+    <p><strong>Nama:</strong> Septi</p>
+    <p><strong>Paket:</strong> PS5 Premium</p>
+    <p><strong>Tanggal:</strong> 2024-07-10</p>
+    <p><strong>Durasi:</strong> 24 Jam</p>
+
+    <div id="qrcode" class="bg-white p-2 inline-block mt-4 rounded"></div>
+  </div>
+
+  <script>
+    // Booking terbaru yang hanya bisa ditampilkan QR-nya
+    const latestBooking = "Booking: Septi - PS5 Premium - 2024-07-10 - 24 Jam";
+    const qrcodeContainer = document.getElementById("qrcode");
+
+    const canvas = document.createElement("canvas");
+    qrcodeContainer.appendChild(canvas);
+
+    QRCode.toCanvas(canvas, latestBooking, {
+      width: 160,
+      color: {
+        dark: "#000000",
+        light: "#ffffff"
+      }
+    }, function (error) {
+      if (error) console.error(error);
+    });
+  </script>
+  <div class="text-center mt-10">
+  <a href="index.html" class="btn-qr">⬅ Kembali ke Beranda</a>
+</div>
+
+
+</body>
+</html>

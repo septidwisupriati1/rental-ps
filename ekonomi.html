@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detail Ruangan Ekonomi - PixelZone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background-color: black;
+      color: #39ff14;
+    }
+
+    .glitch {
+      text-shadow: 2px 0 red, -2px 0 blue;
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-1px, 1px); }
+      40% { transform: translate(1px, -1px); }
+      60% { transform: translate(-1px, -1px); }
+      80% { transform: translate(1px, 1px); }
+      100% { transform: translate(0); }
+    }
+
+    .btn-pixel {
+      border: 4px solid #39ff14;
+      padding: 12px 20px;
+      background-color: black;
+      color: #39ff14;
+      box-shadow: 2px 2px 0px #39ff14;
+      transition: all 0.2s ease-in-out;
+      display: inline-block;
+    }
+
+    .btn-pixel:hover {
+      background-color: #39ff14;
+      color: black;
+      transform: scale(1.05);
+    }
+
+    img {
+      border: 3px solid #39ff14;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body class="p-8 min-h-screen">
+
+  <div class="max-w-4xl mx-auto text-center">
+    <h1 class="glitch text-3xl md:text-5xl mb-6">DETAIL RUANGAN EKONOMI</h1>
+
+    <img src="ekonomi.jpg" alt="Ekonomi Room" class="w-full h-64 object-cover mb-6"/>
+
+    <div class="text-left text-sm md:text-base mb-6 bg-black border-4 border-green-400 p-6">
+      <h2 class="text-xl mb-3">💾 Ruangan Ekonomi</h2>
+      <ul class="list-disc ml-6 mb-4">
+        <li>1 Konsol PS3 (standard)</li>
+        <li>1 Stick & 5 Game Pilihan</li>
+        <li>TV 24 inch</li>
+        <li>Ruangan Sederhana & Kipas Manual</li>
+        <li>Durasi Sewa: 2 Jam</li>
+      </ul>
+      <p class="font-bold text-lg">Harga: Rp 30.000</p>
+    </div>
+
+    <div class="flex flex-col md:flex-row justify-center gap-6">
+      <a href="booking-ekonomi.html" class="btn-pixel">Booking Sekarang</a>
+      <a href="paket.html" class="btn-pixel">⬅ Kembali ke Paket</a>
+    </div>
+  </div>
+
+</body>
+</html>
